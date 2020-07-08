@@ -1,0 +1,24 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A good README generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kairora/readme-generator.git"
+  },
+  "author": "Brianna Bullock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kairora/readme-generator/issues"
+  },
+  "homepage": "https://github.com/kairora/readme-generator#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.0",
+    "util": "^0.12.3"
+  }
+}
