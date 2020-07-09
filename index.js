@@ -6,7 +6,7 @@ function promptQuest() {
     return inquirer.prompt ([
         {    
             type: "input",
-            name: "tile",
+            name: "title",
             message: "Project Title:"
         },
         {
@@ -45,8 +45,28 @@ function promptQuest() {
                 "ISC License", 
                 "SIL Open Font License 1.1"
             ]
-        },    
-    ])
+        },   
+        {
+            type: "input",
+            name: "github",
+            message: "Github Username:"
+        }, 
+        {
+            type: "input",
+            name: "email",
+            message: "Email Address:"
+        },
+    ]).then(function(result) {
+
+        var newReadMe = result.title.toLowerCase().split(' ').join('') + ".md";
+        fs.writeFile(newReadMe, JSON.stringify(result, null, '\t'), function(err) {
+            if (err) {
+            return console.log(err);
+        }
+        console.log("Success!");
+
+        });
+    });
 }
 
 promptQuest();
