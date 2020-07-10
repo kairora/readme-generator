@@ -96,7 +96,7 @@ ${response.test}
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/kairora) to learn more about this CLI at this.
+You can visit my [Github Profile](https://www.github.com/kairora) to learn more about this CLI.
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). `;
 }
 
