@@ -95,8 +95,6 @@ ${response.guidelines}
 ${response.test} 
 
 ## Questions
-You can visit my Github to learn more about this CLI 
-[Github Profile Link](https://www.github.com/${response.github}).
 
 You can visit my [Github Profile](https://www.github.com/kairora) to learn more about this CLI at this.
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). `;
