@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const licensor = require("./license.js");
+
 
 const asyncFileWriter = util.promisify(fs.writeFile);
 
@@ -15,6 +17,11 @@ function promptQuest() {
             type: "input",
             name: "description",
             message: "Description:"
+        },
+        {
+            type: "input",
+            name: "year",
+            message: "What year did you copyright this project?"
         },
         {
             type: "input",
@@ -34,18 +41,18 @@ function promptQuest() {
         {
             type: "input",
             name: "test",
-            message: "Test Instructions:"
+            message: "What is the command line that should be run?"
         },
         {
             type: "list",
             name: "license",
             message: "Which license?",
             choices: [
-                "Apache License 2.0",
-                "GNU GPLv3",
+                "Apache",
+                "GPLv3",
                 "MIT",
-                "ISC License",
-                "SIL Open Font License 1.1"
+                "ISC",
+                "none",
             ]
         },
         {
@@ -58,17 +65,64 @@ function promptQuest() {
             name: "email",
             message: "Email Address:"
         },
+        {
+            type: "input",
+            name: "name",
+            message: "What is your full name?"
+        },
     ])
+    
+
+
+// function badger(response){
+//     if (this.response.license == "MIT") {
+//         return `[![${response.license} license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)`
+//     }
+}
+
+function licenseResult (response) {
+    const licenseChoice = response.license;
+    const yearName = {year: response.year,
+        name: response.name}
+
+    switch(licenseChoice) {
+        
+        case "Apache": 
+        return licensor.Apache(yearName);
+        
+
+        case "GPLv3": 
+        return licensor.GPLv3(yearName);
+        
+
+        case "MIT": 
+        return licensor.MIT(yearName);
+        
+
+        case "ISC": 
+        return licensor.ISC(yearName);
+        
+
+        case "none": 
+        return "There is no license for this application.";
+        
+    }
 }
 
 
-// function for md.
+
+
+
+// function for md
 function createMD(response) {
+    // Write code to a readme
     return `
 # ${response.title}
+![${response.license} license](https://img.shields.io/badge/License-${response.license}-blue.svg) 
 
 ## Description 
 ${response.description}
+---
 
 ## Table of Contents
 1. [Installation](#Installation)
@@ -84,15 +138,24 @@ ${response.instructions}
 
 ## Usage
 ${response.usage}
+---
 
 ## License
-${response.license}
+### ${response.license} License` +
 
+licenseResult(response) +
+
+` 
+
+---
 ## Contributing
 ${response.guidelines}
 
 ## Tests
-${response.test} 
+~~~JS
+${response.test}
+~~~
+---
 
 ## Questions
 
@@ -100,7 +163,7 @@ You can visit my [Github Profile](https://www.github.com/kairora) to learn more 
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). `;
 }
 
-// promptQuest();
+
 
 async function startAll() {
     try {
