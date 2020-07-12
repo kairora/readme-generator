@@ -3,7 +3,7 @@
 ![ISC license](https://img.shields.io/badge/License-ISC-blue.svg) 
 
 ## Description 
-This CLI program enables a user to generate a quality README Markdown file after giving responses to a series of prompts. This enables the user to spend less time creating a good README and more time on the project itself.
+This CLI program enables a user to generate a quality README Markdown file after giving responses to a series of prompts. This enables the user to spend less time creating a good README and more time on the project itself.  -- Even this README file as created using the app.
 
 ---
 
@@ -27,7 +27,12 @@ node index
 ~~~
 
 
-Once run, the user will then be prompted to answer a series of questions regarding the project title, description, license information, and some personal information. To move to the next question, simply hit enter or return. After the final question, the user will be presented with a new, quality README Markdown file in their folder. From there, the user is able to edit and add to their newly created README Markdown file.
+Once run, the user will then be prompted to answer a series of questions regarding the project title, description, license information, and some personal information. To move to the next question, simply hit enter or return. 
+
+![Prompts Photo](./assets/cli-prompts.jpg)
+After the final question, the user will be presented with a new, quality README Markdown file in their folder that encapsulates all the user responses and even styles links, code snippets, and separates sections. From there, the user is able to edit and add to their newly created README Markdown file.
+
+![Readme Photo](./assets/readme-photo.jpg)
 
 ---
 

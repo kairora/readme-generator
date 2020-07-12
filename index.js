@@ -93,7 +93,7 @@ function licenseResult (response) {
         return licensor.ISC(yearName);
         
         case "none": 
-        return "There is no license for this application.";
+        return "There is no license for this application. ";
         
     }
 }
