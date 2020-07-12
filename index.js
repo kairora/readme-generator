@@ -3,7 +3,6 @@ const fs = require("fs");
 const util = require("util");
 const licensor = require("./license.js");
 
-
 const asyncFileWriter = util.promisify(fs.writeFile);
 
 function promptQuest() {
@@ -26,22 +25,22 @@ function promptQuest() {
         {
             type: "input",
             name: "instructions",
-            message: "Installation Instructions:"
+            message: "What steps are required to install this project?"
         },
         {
             type: "input",
             name: "usage",
-            message: "Usage Information:"
+            message: "How does a user use this project?"
         },
         {
             type: "input",
             name: "guidelines",
-            message: "Contribution Guidelines:"
+            message: "What are some guidelines for contributon from other developers?"
         },
         {
             type: "input",
             name: "test",
-            message: "What is the command line that should be run?"
+            message: "What is the command line that should be run for tests?"
         },
         {
             type: "list",
@@ -57,6 +56,11 @@ function promptQuest() {
         },
         {
             type: "input",
+            name: "name",
+            message: "What is your full name?"
+        },
+        {
+            type: "input",
             name: "github",
             message: "Github Username:"
         },
@@ -65,19 +69,8 @@ function promptQuest() {
             name: "email",
             message: "Email Address:"
         },
-        {
-            type: "input",
-            name: "name",
-            message: "What is your full name?"
-        },
+        
     ])
-    
-
-
-// function badger(response){
-//     if (this.response.license == "MIT") {
-//         return `[![${response.license} license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)`
-//     }
 }
 
 function licenseResult (response) {
@@ -90,29 +83,20 @@ function licenseResult (response) {
         case "Apache": 
         return licensor.Apache(yearName);
         
-
         case "GPLv3": 
         return licensor.GPLv3(yearName);
         
-
         case "MIT": 
         return licensor.MIT(yearName);
-        
 
         case "ISC": 
         return licensor.ISC(yearName);
         
-
         case "none": 
         return "There is no license for this application.";
         
     }
 }
-
-
-
-
-
 // function for md
 function createMD(response) {
     // Write code to a readme
@@ -122,6 +106,7 @@ function createMD(response) {
 
 ## Description 
 ${response.description}
+
 ---
 
 ## Table of Contents
@@ -138,6 +123,7 @@ ${response.instructions}
 
 ## Usage
 ${response.usage}
+
 ---
 
 ## License
@@ -163,13 +149,11 @@ You can visit my [Github Profile](https://www.github.com/kairora) to learn more 
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). `;
 }
 
-
-
 async function startAll() {
     try {
         const answers = await promptQuest();
         const markDown = createMD(answers);
-        await asyncFileWriter("README3.md", markDown);
+        await asyncFileWriter("README.md", markDown);
         console.log("New readme created!");
     } catch (err) {
         console.log(err);
