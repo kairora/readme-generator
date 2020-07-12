@@ -60,5 +60,5 @@ npm run test
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/kairora) or this app's [Github Repository](https://github.com/kairora/readme-generator) to learn more about this CLI.
+You can visit my [Github Profile](https://www.github.com/kairora) or this app's [Github Repository](https://github.com/kairora/readme-generator) to learn more about this CLI program.
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). 
