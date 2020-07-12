@@ -3,7 +3,7 @@
 ![ISC license](https://img.shields.io/badge/License-ISC-blue.svg) 
 
 ## Description 
-This CLI program enables a user to generate a quality README.md file after giving responses to a series of prompts. This enables the user to spend less time creating a good README and more time on the project itself.
+This CLI program enables a user to generate a quality README Markdown file after giving responses to a series of prompts. This enables the user to spend less time creating a good README and more time on the project itself.
 
 ---
 
@@ -20,7 +20,14 @@ This CLI program enables a user to generate a quality README.md file after givin
 1. Install Node.js 2. Clone this project's repository to your computer 3. Open the readme-generator folder in VS Code 4. Open the folder in terminal 5. Install the inquirer, fs, and util packages.
 
 ## Usage
-After installing the packages, the user should run the command below in terminal. Once run, the user will then be prompted to answer a series of questions regarding the project title, description, license information, and some personal information. To move to the next question, simply hit enter or return. After the final question, the user will be presented with a new, quality README.md file in their folder. From there, the user is able to edit and add to their newly created README.md file.
+After installing the packages, the user should run the command below in terminal. 
+
+~~~JS
+node index
+~~~
+
+
+Once run, the user will then be prompted to answer a series of questions regarding the project title, description, license information, and some personal information. To move to the next question, simply hit enter or return. After the final question, the user will be presented with a new, quality README Markdown file in their folder. From there, the user is able to edit and add to their newly created README Markdown file.
 
 ---
 
@@ -34,7 +41,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 ---
 ## Contributing
-If you would like to contribute some code to this project or debug and test for it, please shoot the creator an email at the email address below.
+If you would like to contribute some code to this project or debug and test for it, please shoot the creator an email using the email address below.
 
 ## Tests
 ~~~JS
