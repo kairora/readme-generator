@@ -17,7 +17,11 @@ This CLI program enables a user to generate a quality README Markdown file after
 ---
 
 ## Installation
-1. Install Node.js 2. Clone this project's repository to your computer 3. Open the readme-generator folder in VS Code 4. Open the folder in terminal 5. Install the inquirer, fs, and util packages.
+1. Install [Node.js](https://nodejs.org/en/)
+2. Clone this project's repository to your computer 
+3. Open the readme-generator folder in VS Code 
+4. Open the folder in terminal 
+5. Install the inquirer, fs, and util packages
 
 ## Usage
 After installing the packages, the user should run the command below in terminal. 
@@ -56,5 +60,5 @@ npm run test
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/kairora) to learn more about this CLI.
+You can visit my [Github Profile](https://www.github.com/kairora) or this app's [Github Repository](https://github.com/kairora/readme-generator) to learn more about this CLI.
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). 
