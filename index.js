@@ -35,7 +35,7 @@ function promptQuest() {
         {
             type: "input",
             name: "guidelines",
-            message: "What are some guidelines for contributon from other developers?"
+            message: "What are some guidelines for contribution from other developers?"
         },
         {
             type: "input",
@@ -145,8 +145,8 @@ ${response.test}
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/kairora) to learn more about this CLI.
-Or, if you have questions regarding this CLI program, please [send me an email](mailto:brianna.bullock16@gmail.com). `;
+You can visit my [Github Profile](https://www.github.com/${response.github}) to learn more about this CLI.
+Or, if you have questions regarding this CLI program, please [send me an email](mailto:${response.email}). `;
 }
 
 async function startAll() {
