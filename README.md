@@ -38,6 +38,8 @@ After the final question, the user will be presented with a new, quality README 
 
 ![Readme Photo](./assets/readme-photo.jpg)
 
+For a visual demonstration, please click and watch this [Youtube Video here](https://youtu.be/i0tiPHxtzpw).
+
 ---
 
 ## License
