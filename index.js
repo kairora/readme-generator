@@ -66,8 +66,23 @@ function promptQuest() {
         },
         {
             type: "input",
+            name: "repo",
+            message: "Input the link to your repo here."
+        },
+        {
+            type: "input",
             name: "email",
             message: "Email Address:"
+        },
+        {
+            type: "input",
+            name: "img",
+            message: "Input the link or directory path to your main app image.  Remember: Use a PNG file!"
+        },
+        {
+            type: "input",
+            name: "imgAlt",
+            message: "Type the alt text that will display if your image breaks."
         },
         
     ])
@@ -107,6 +122,8 @@ function createMD(response) {
 ## Description 
 ${response.description}
 
+![${response.imgAlt}](${response.img})
+
 ---
 
 ## Table of Contents
@@ -145,7 +162,7 @@ ${response.test}
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/${response.github}) to learn more about this CLI.
+You can visit my [Github Profile](https://www.github.com/${response.github}) or [this app's Github repo](${response.repo}) to learn more about this CLI.
 Or, if you have questions regarding this CLI program, please [send me an email](mailto:${response.email}). `;
 }
 
@@ -153,7 +170,7 @@ async function startAll() {
     try {
         const answers = await promptQuest();
         const markDown = createMD(answers);
-        await asyncFileWriter("README.md", markDown);
+        await asyncFileWriter("READMEnew.md", markDown);
         console.log("New readme created!");
     } catch (err) {
         console.log(err);
