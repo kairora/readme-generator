@@ -33,10 +33,10 @@ node index
 
 Once run, the user will then be prompted to answer a series of questions regarding the project title, description, license information, and some personal information. To move to the next question, simply hit enter or return. 
 
-![Prompts Photo](./assets/cli-prompts.jpg)
+![Prompts Photo](./assets/cli-prompts.JPG)
 After the final question, the user will be presented with a new, quality README Markdown file in their folder that encapsulates all the user responses and even styles links, code snippets, and separates sections. From there, the user is able to edit and add to their newly created README Markdown file.
 
-![Readme Photo](./assets/readme-photo.jpg)
+![Readme Photo](./assets/readme-photo.JPG)
 
 For a visual demonstration, please click and watch this [Youtube Video here](https://youtu.be/i0tiPHxtzpw).
 
