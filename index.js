@@ -162,8 +162,8 @@ ${response.test}
 
 ## Questions
 
-You can visit my [Github Profile](https://www.github.com/${response.github}) or [this app's Github repo](${response.repo}) to learn more about this CLI.
-Or, if you have questions regarding this CLI program, please [send me an email](mailto:${response.email}). `;
+You can visit my [Github Profile](https://www.github.com/${response.github}) or [this app's Github repo](${response.repo}) to learn more about this.
+Or, if you have questions regarding this program, please [send me an email](mailto:${response.email}). `;
 }
 
 async function startAll() {
